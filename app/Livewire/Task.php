@@ -11,10 +11,19 @@ class Task extends Component
 
     public TaskModel $task;
 
+    public $text;
+
+    protected $rules = ['task.text' => 'required|max:40'];
+
     public function mount()
     {
         $this->tasks = TaskModel::get();
-        $this->$task = new TaskModel();
+        $this->task = new TaskModel();
+    }
+
+    public function save()
+    {
+
     }
     public function render()
     {
