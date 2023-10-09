@@ -25,6 +25,7 @@ class Task extends Component
     {dd($this->task);
 
     }
+
     public function render()
     {
         return view('livewire.task');
