@@ -22,11 +22,11 @@ class Task extends Component
     }
 
     public function save()
-    {//dd($this->task);
+    {dd($this->task);
 
-        $this->validate();
+       // $this->validate();
 
-        $this->task->save();
+       // $this->task->save();
 
     }
 
