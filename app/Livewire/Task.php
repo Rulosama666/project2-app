@@ -11,7 +11,7 @@ class Task extends Component
 
     public TaskModel $task;
 
-    public $text;
+    //public $text;
 
     protected $rules = ['task.text' => 'required|max:40'];
 
@@ -22,9 +22,14 @@ class Task extends Component
     }
 
     public function save()
-    {
+    {//dd($this->task);
+
+        $this->validate();
+
+        $this->task->save();
 
     }
+
     public function render()
     {
         return view('livewire.task');
